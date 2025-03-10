@@ -6,18 +6,28 @@ public class RnaTranscription {
         if (dnaStrand.isEmpty()) {
             return "";
         }
-        if (dnaStrand.equals("C")) {
-            return "G";
+        
+        StringBuilder rnaStrand = new StringBuilder();
+        
+        for (char nucleotide : dnaStrand.toCharArray()) {
+            switch (nucleotide) {
+                case 'G':
+                    rnaStrand.append('C');
+                    break;
+                case 'C':
+                    rnaStrand.append('G');
+                    break;
+                case 'T':
+                    rnaStrand.append('A');
+                    break;
+                case 'A':
+                    rnaStrand.append('U');
+                    break;
+                default:
+                    break;
+            }
         }
-        if (dnaStrand.equals("G")) {
-            return "C";
-        }
-        if (dnaStrand.equals("T")) {
-            return "A";
-        }
-        if (dnaStrand.equals("A")) {
-            return "U";
-        }
-        return "";
+        
+        return rnaStrand.toString();
     }
 }

@@ -9,6 +9,9 @@ public class RnaTranscription {
         if (dnaStrand.equals("C")) {
             return "G";
         }
+        if (dnaStrand.equals("G")) {
+            return "C";
+        }
         return "";
     }
 }

@@ -23,8 +23,8 @@ public class RnaTranscription {
                 case 'A':
                     rnaStrand.append('U');
                     break;
-                default:
-                    break;
+                    default:
+                       throw new IllegalArgumentException("Invalid nucleotide: " + nucleotide);
             }
         }
         

@@ -33,4 +33,9 @@ public class RnaTranscriptionTest {
     assertThat(rnaTranscription.toRna("A"), is("U"));
     }
 
+    @Test
+    public void testRnaTranscription() {
+    assertThat(rnaTranscription.toRna("ACGTGGTCTTAA"), is("UGCACCAGAAUU"));
+    }
+
 }

@@ -13,4 +13,9 @@ public class RnaTranscriptionTest {
         assertThat(rnaTranscription.toRna(""), is(""));
     }
 
+    @Test
+    public void testRnaTranscriptionOfCytosineIsGuanine() {
+    assertThat(rnaTranscription.toRna("C"), is("G"));
+}
+
 }

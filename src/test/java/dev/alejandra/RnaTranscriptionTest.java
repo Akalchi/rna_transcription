@@ -28,4 +28,9 @@ public class RnaTranscriptionTest {
     assertThat(rnaTranscription.toRna("T"), is("A"));
     }
 
+    @Test
+    public void testRnaTranscriptionOfAdenineIsUracil() {
+    assertThat(rnaTranscription.toRna("A"), is("U"));
+    }
+
 }

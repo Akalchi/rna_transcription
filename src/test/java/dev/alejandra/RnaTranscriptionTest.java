@@ -1,6 +1,8 @@
 package dev.alejandra;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -37,5 +39,12 @@ public class RnaTranscriptionTest {
     public void testRnaTranscription() {
     assertThat(rnaTranscription.toRna("ACGTGGTCTTAA"), is("UGCACCAGAAUU"));
     }
+
+    @Test
+    public void testInvalidInputRnaSequence() {
+    assertThrows(IllegalArgumentException.class, () -> {
+        rnaTranscription.toRna("XYZ");
+    });
+}
 
 }

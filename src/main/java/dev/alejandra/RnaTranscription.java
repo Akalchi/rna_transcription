@@ -15,6 +15,9 @@ public class RnaTranscription {
         if (dnaStrand.equals("T")) {
             return "A";
         }
+        if (dnaStrand.equals("A")) {
+            return "U";
+        }
         return "";
     }
 }
